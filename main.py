@@ -34,11 +34,11 @@ def main():
         with open("log.txt", "a") as log_file:
             log_file.write(f"{datetime.now()}: {log_message}\n")
     elif "Es ist ein Fehler aufgetreten" in check_request.text:
-        send_telegram_chat("Bot machine broke")
+        send_telegram_chat("Github user @dnlkv has diactivated this Bot")
         with open("./error.txt", "w", encoding='utf-8') as f:
             f.write(check_request.text)
     else:
-        send_telegram_chat("Termin verfügbar")
+        send_telegram_chat("Github user @dnlkv has diactivated this Bot")
 
 if __name__ == "__main__":
     main()
